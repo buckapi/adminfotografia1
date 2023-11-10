@@ -1,0 +1,47 @@
+.btedit {
+    color: #00838f;
+    
+}
+
+ .btn-danger1 {
+    color: #fff;
+    background-color: #00838f;
+    border-color: #00838f;
+}
+/*
+.light.btn-danger {
+    background-color: #fff3f7;
+    border-color: #fff3f7;
+    color: #00838f;
+} */
+
+/* .card {
+        margin-bottom: 1.875rem;
+        background-color: #fff;
+        transition: all .5s ease-in-out;
+        position: relative;
+        border: 1px solid #00838f;
+        border-radius: 1.25rem;
+        box-shadow: 0px 0px 1px 0px #00838f;
+        height: calc(100% - 30px);
+} */
+
+.light.btn-danger {
+    background-color: #fff3f7;
+    border-color: #f94687;
+    color: #F94687;
+}
+
+.client-presentation {
+    background-color: #f7f7f7;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.client-name,
+.client-industry {
+    font-size: 18px;
+    color: #333;
+    margin-top: 10px;
+}

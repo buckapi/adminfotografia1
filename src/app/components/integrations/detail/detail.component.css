@@ -1,0 +1,19 @@
+.module-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.text-content {
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.item {
+    color: #007bff; /* Cambia el color de texto a azul */
+    font-weight: normal; /* Restaura el peso de la fuente a normal */
+}
+
+/* Puedes agregar más estilos según tus necesidades */

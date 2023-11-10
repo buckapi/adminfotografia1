@@ -1,0 +1,46 @@
+.btedit {
+    color: #00838f;
+    
+}
+
+ .btn-danger1 {
+    color: #fff;
+    background-color: #00838f;
+    border-color: #00838f;
+}
+/*
+.light.btn-danger {
+    background-color: #fff3f7;
+    border-color: #fff3f7;
+    color: #00838f;
+} */
+
+.testimonial {
+    background-color: #f7f7f7;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.testimonial h4 {
+    font-size: 24px;
+    color: #333;
+}
+
+.testimonial-title {
+    font-size: 18px;
+    color: #777;
+    margin-top: 10px;
+}
+
+.testimonial-detail {
+    font-size: 16px;
+    color: #555;
+    margin-top: 10px;
+}
+.fixed-size-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}

@@ -1,0 +1,65 @@
+<div class="content-body">
+    <div class="container-fluid">
+        <div class="page-titles">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a routerLink="../clientall">Clientes</a></li>
+                <li class="breadcrumb-item active"><a href="javascript:void(0)">Agregar Cliente</a></li>
+            </ol>
+        </div>
+        <!-- row -->
+        <div class="row">
+            <div class="col-xl-12 col-xxl-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title"></h4>
+                    </div>
+                    <div class="card-body">
+
+                        <form>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="">
+                                      <div class="">
+                                        <ngx-awesome-uploader
+                                        [adapter]="adapter"
+                                        [captions]="captions">
+                                        </ngx-awesome-uploader>
+                                      </div>
+                                    </div>
+                                  </div>
+                                <div class="col-md-6">
+                                
+                                <div class="">
+                                    <div class="">
+                                    <div class="form-group">
+                                        <label for="event-name">Nombre de cliente</label>
+                                        <input  class="form-control" placeholder="nombre"type="text" [(ngModel)]="data.name" name="name" required  [ngModelOptions]="{standalone: true}">
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="">
+                                    <div class="">
+                                    <div class="form-group">
+                                        <label for="event-description">Rubro</label>
+                                        
+                                        <select id="category" class="form-control wide my-custom-select" [(ngModel)]="category" (ngModelChange)="setCategory(category)" [ngModelOptions]="{standalone: true}">
+                                            <option *ngFor="let category of yeoman.allcategory, let i = index " [ngValue]="i"> 
+                                                <span   style="cursor:pointer;">{{category.name}}</span>
+                                            </option>
+                                        </select>
+                                    </div>
+                                    </div>
+                                </div>
+
+                                </div>
+                            </div>
+                            <div class="popup-box-actions medium void text-right">
+                              <button class="btn btn-primary" id="closeButton"  (click)="onSubmit()">Guardar!</button>
+                            </div>
+                          </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

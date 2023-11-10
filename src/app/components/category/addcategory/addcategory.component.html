@@ -1,0 +1,48 @@
+<div class="content-body">
+    <div class="container-fluid">
+        <div class="page-titles">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a routerLink="../cateall">Industrias</a></li>
+                <li class="breadcrumb-item active"><a href="javascript:void(0)">Agregar Industria</a></li>
+            </ol>
+        </div>
+        <!-- row -->
+        <div class="row">
+            <div class="col-xl-12 col-xxl-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title"></h4>
+                    </div>
+                    <div class="card-body">
+
+                        <form>
+                            <div class="row">
+                                <div class="col-md-8">
+                                <div class="">
+                                    <div class="">
+                                    <div class="form-group">
+                                        <label for="event-name">Nombre de Industria</label>
+                                        <input  class="form-control" placeholder="nombre"type="text" [(ngModel)]="data.name" name="name" required  [ngModelOptions]="{standalone: true}">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="event-name">Descripción de la Industria</label>
+                                        <input  class="form-control" placeholder="Descripción"type="text" [(ngModel)]="data.description" name="description" required  [ngModelOptions]="{standalone: true}">
+                                    </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="event-name">Modulos de la Industria</label>
+                                        <input  class="form-control" placeholder="Modulos"type="text" [(ngModel)]="data.modules" name="modules" required  [ngModelOptions]="{standalone: true}">
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="popup-box-actions medium void">
+                              <button class="btn btn-primary" id="closeButton"  (click)="onSubmit()">Guardar!</button>
+                            </div>
+                          </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

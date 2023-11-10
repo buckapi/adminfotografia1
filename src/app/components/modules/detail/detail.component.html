@@ -1,0 +1,85 @@
+<div class="content-body">
+    <div class="container-fluid">
+        <div class="page-titles">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a routerLink="../modulesAll">Inventario</a></li>
+                <li class="breadcrumb-item active"><a href="javascript:void(0)">Detalle</a></li>
+                <!-- <a (click)="delete()"class="btn btn-danger light btn-md ml-auto"><i class="fa fa-trash scale5 mr-3"></i>Borrar</a> -->
+                <button [swal]="
+                {title: '<strong>Borrar modulo <u></u></strong>', icon: 'error',
+                html: 'Confirma que desea eliminar este modulo ?',
+                showCloseButton: true,
+                showCancelButton: true,
+                cancelButtonColor: '#101554',
+                confirmButtonColor: '#ff3366',
+                focusConfirm: true,
+                confirmButtonText:' Borrar',
+                confirmButtonAriaLabel: 'Thumbs up, great!',
+                cancelButtonText: ' Cancelar',
+                cancelButtonAriaLabel: 'Thumbs down'
+                }"
+                (confirm)="delete()"
+                (dismiss)="cancelDelete()"
+                 class="btn btn-outline-danger light  ml-auto btn-xs" style="margin-right:10%;">
+                <i class="feather icon-trash"></i> Borrar
+                </button>
+            </ol>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
+                             <div class="col-xl-3 col-lg-6  col-md-6 col-xxl-5 ">
+                              <div class="tab-content">
+                                   
+                                    <div role="tabpanel" class="tab-pane fade show " [class.active]="i == 0" id="{{i}}" *ngFor="let image of yeoman.preview.images;let i =index;">
+                                        <img class="img-fluid" src="assets/gymove/images/product/1.jpg" alt="" *ngIf="yeoman.preview.images[0]===undefined">
+                                        <img class="img-fluid" src="{{image}}" alt="" *ngIf="image!==undefined">
+                                    </div>
+                                    
+                                   
+                                </div>
+                                <div class="tab-slide-content new-arrival-product mb-4 mb-xl-0">
+                                  
+                                    <ul class="nav slide-item-list mt-3" role="tablist">
+                                        <li role="presentation" class="show" *ngFor="let image of yeoman.preview.images;let i =index;">
+                                            <a href="#{{i}}" role="tab" data-toggle="tab">
+                                                <img class="img-fluid" src="{{image}}" alt="" width="50">
+                                            </a>
+                                        </li>
+                                        
+                                    </ul>
+                                </div> 
+                            </div> 
+                            <!--Tab slider End-->
+                            <div class="col-xl-12 col-lg-12  col-md-12 col-xxl-7 col-sm-12">
+                                <div class="product-detail-content">
+                                    <!--Product details-->
+                                    <div class="new-arrival-content pr">
+                                        <h4>Nombre del modulo: {{yeoman.preview.name}}</h4>
+                                     
+                                        <p class="text-content">Descripción: <span class="item">{{yeoman.preview.description}}</span></p>
+                                        
+                                        <div >
+                                            <div>
+                                                <p >Rubro:
+                                                     <span class="badge badge-outline-info"  *ngFor="let category of yeoman.preview.categories;let i =index;">
+                                                         {{category.name}} 
+                                                    </span> 
+                                                </p>
+                                            </div>
+                                        </div>
+                                      
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- review -->
+          
+        </div>
+    </div>
+</div>

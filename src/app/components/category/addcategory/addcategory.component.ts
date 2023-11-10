@@ -23,7 +23,7 @@ export class AddcategoryComponent implements AfterViewInit {
   // products$:any={};
   public captions: UploaderCaptions = {
     dropzone: {
-      title: 'Imágenes del categoria',
+      title: 'Imágenes del servicio',
       or: '.',
       browse: 'Cargar',
     },
@@ -39,9 +39,10 @@ export class AddcategoryComponent implements AfterViewInit {
   data = {
     images: [] as string[], // o cualquier otro tipo de dato adecuado, como any[]
     name: '',
+    subname: '',
     description: '',
     ref: '',
-    modules:''
+  /*   package:'' */
   };
  
   adapter = new  DemoFilePickerAdapter(this.http,this._butler);

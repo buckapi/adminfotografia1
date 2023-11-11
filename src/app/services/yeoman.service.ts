@@ -13,6 +13,9 @@ export class Yeoman {
   existenciasSize:number=0;
   allCategoriesSize:number=0;
   allClientsSize:number=0;
+  allPackagesSize:number=0;
+  allProductsSize:number=0;
+  allAlbumsSize:number=0;
     virtualRoute:any="dashboard";
     pop:Boolean=false;
     data:any={};
@@ -29,7 +32,10 @@ export class Yeoman {
     integration:any={};
     allintegration:any=[];
     modules:any={};
+    package:any={};
     allModules:any=[];
+    allAlbums:any=[];
+    allPackage:any=[];
     currency:number=1;
     config: {
       clientSelected:number;

@@ -4,7 +4,7 @@
       <div class="row">
           <div class="col-xl-12 col-xxl-12">
               <div class="row">
-                <div class="col-lg-3 col-sm-6"  routerLink="solutionAll" style="cursor: pointer;">
+                <div class="col-lg-3 col-sm-6"  routerLink="servAll" style="cursor: pointer;">
                     <div class="card avtivity-card">
                         <div class="card-body">
                             <div class="media align-items-center">
@@ -13,10 +13,8 @@
                                 </span>
                                 <div class="media-body">
                                     <p class="fs-14 mb-2">Servicios</p>
-                                    <!-- <span class="title text-black font-w600">{{allSize}}</span> -->
-                                    <span class="title text-black font-w600" *ngIf="allSize<=0"> Loading ... </span>
-                                    <span class="title text-black font-w600" *ngIf="allSize>0">{{allSize}} Servicios </span>
-                           
+                                    <span class="title text-black font-w600" *ngIf="yeoman.allCategoriesSize<=0"> Loading ... </span>
+                                    <span class="title text-black font-w600" *ngIf="yeoman.allCategoriesSize>0">{{yeoman.allCategoriesSize}} Servicios </span>
                                 </div>
                             </div>
                             <div class="progress" style="height:5px;">
@@ -28,7 +26,7 @@
                         <div class="effect bg-info"></div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-sm-6"  routerLink="clientall" style="cursor: pointer;">
+                <div class="col-lg-3 col-sm-6"  routerLink="pacAll" style="cursor: pointer;">
                     <div class="card avtivity-card">
                         <div class="card-body">
                             <div class="media align-items-center">
@@ -38,8 +36,8 @@
                                 </span>
                                 <div class="media-body">
                                     <p class="fs-14 mb-2">Paquetes</p>
-                                    <span class="title text-black font-w600" *ngIf="yeoman.allClientsSize<=0"> Loading ... </span>
-                                    <span class="title text-black font-w600" *ngIf="yeoman.allClientsSize>0">{{yeoman.allClientsSize}} Paquetes </span>
+                                    <span class="title text-black font-w600" *ngIf="yeoman.allPackagesSize<=0"> Loading ... </span>
+                                    <span class="title text-black font-w600" *ngIf="yeoman.allPackagesSize>0">{{yeoman.allPackagesSize}} Paquetes </span>
                            
                                 </div>
                             </div>
@@ -52,7 +50,7 @@
                         <div class="effect bg-info"></div>
                     </div>
                 </div>
-                  <div class=" col-lg-3 col-sm-6"  routerLink="cateall" style="cursor: pointer;">
+                  <div class=" col-lg-3 col-sm-6"  routerLink="proAll" style="cursor: pointer;">
                       <div class="card avtivity-card">
                           <div class="card-body">
                               <div class="media align-items-center">
@@ -62,8 +60,8 @@
                                   </span>
                                   <div class="media-body">
                                       <p class="fs-14 mb-2">Productos</p>
-                                      <span class="title text-black font-w600" *ngIf="yeoman.allCategoriesSize<=0"> Loading ... </span>
-                                      <span class="title text-black font-w600" *ngIf="yeoman.allCategoriesSize>0">{{yeoman.allCategoriesSize}} Productos </span>
+                                      <span class="title text-black font-w600" *ngIf="yeoman.allProductsSize<=0"> Loading ... </span>
+                                      <span class="title text-black font-w600" *ngIf="yeoman.allProductsSize>0">{{yeoman.allProductsSize}} Productos </span>
                              
                                      
                                     </div>
@@ -77,7 +75,7 @@
                           <div class="effect bg-success"></div>
                       </div>
                   </div>
-                  <div class=" col-lg-3 col-sm-6"  routerLink="cateall" style="cursor: pointer;">
+                  <div class=" col-lg-3 col-sm-6"  routerLink="albAll" style="cursor: pointer;">
                     <div class="card avtivity-card">
                         <div class="card-body">
                             <div class="media align-items-center">
@@ -87,8 +85,8 @@
                                 </span>
                                 <div class="media-body">
                                     <p class="fs-14 mb-2">Albums</p>
-                                    <span class="title text-black font-w600" *ngIf="yeoman.allCategoriesSize<=0"> Loading ... </span>
-                                    <span class="title text-black font-w600" *ngIf="yeoman.allCategoriesSize>0">{{yeoman.allCategoriesSize}} Albums </span>
+                                    <span class="title text-black font-w600" *ngIf="yeoman.allAlbumsSize<=0"> Loading ... </span>
+                                    <span class="title text-black font-w600" *ngIf="yeoman.allAlbumsSize>0">{{yeoman.allAlbumsSize}} Albums </span>
                            
                                    
                                   </div>

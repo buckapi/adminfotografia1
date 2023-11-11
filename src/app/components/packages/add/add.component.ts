@@ -38,9 +38,20 @@ export class AddComponent implements AfterViewInit {
 
   data = {
     images: [] as string[], // o cualquier otro tipo de dato adecuado, como any[]
-    name: '',
     ref: '',
-   
+    name: '',
+    title: '',
+    description: '', 
+    placeSession: '',
+    numberPeople: '',
+    clothing: '',
+    numberPhoto: '',
+    price:'',
+    numberSession:'',
+    duration:'',
+    note:'',
+    includes:'',
+    idCategory:''
   };
 
   
@@ -76,6 +87,28 @@ export class AddComponent implements AfterViewInit {
         });
         console.log(this.data);
         
+        }
+        getAllCategories(){
+          this.dataApiService.getAllCategory().subscribe(response=>{
+            this.yeoman.categories=response;
+            this.yeoman.allcategory=response;
+            this.yeoman.allCategoriesSize= this.yeoman.categories.length;
+          });
+        }
+       
+        onCategorySelect(category:any) {        
+          this.data.idCategory = "c"+category.id;
+          console.log(category.id);
+        }
+        
+        setCategory(category:any){
+          let index=category;
+          console.log("seleccionada: "+this.yeoman.allcategory[index].name);
+          this.categorySeted=true;
+          if (this.yeoman.categories!==undefined){
+          this.data.idCategory=this.yeoman.allcategory[index].id;
+          console.log("id: "+JSON.stringify(this.data.idCategory));
+          }
         }
        
     

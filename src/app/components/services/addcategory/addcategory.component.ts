@@ -40,7 +40,9 @@ export class AddcategoryComponent implements AfterViewInit {
     images: [] as string[], // o cualquier otro tipo de dato adecuado, como any[]
     name: '',
     subname: '',
-    description: '',
+    description1: '',
+    description2: '',
+    description3: '',
     ref: '',
   /*   package:'' */
   };

@@ -7,7 +7,7 @@ const routes: Routes = [
   
   { path: 'login', loadChildren: () => import('./components/login/login.module').then(m => m.LoginModule) },
   
-  { path: 'servadd', loadChildren: () => import('./components/services/addcategory/addcategory.module').then(m => m.AddcategoryModule) },
+  { path: 'servAdd', loadChildren: () => import('./components/services/addcategory/addcategory.module').then(m => m.AddcategoryModule) },
 
   { path: 'servAll', loadChildren: () => import('./components/services/allcategory/allcategory.module').then(m => m.AllcategoryModule) },
 

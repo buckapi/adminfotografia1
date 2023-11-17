@@ -51,7 +51,10 @@ export class AddComponent implements AfterViewInit {
     duration:'',
     note:'',
     includes:'',
-    idCategory:''
+    idCategory:'',
+    /* p:'',
+    r:'', */
+    faqs: [{ p: '', r: '' }]
   };
 
   
@@ -109,6 +112,9 @@ export class AddComponent implements AfterViewInit {
           this.data.idCategory=this.yeoman.allcategory[index].id;
           console.log("id: "+JSON.stringify(this.data.idCategory));
           }
+        }
+        addFaq() {
+          this.data.faqs.push({ p: '', r: '' });
         }
        
     

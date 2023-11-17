@@ -101,14 +101,30 @@
                                            
                                         </div>
                                     </div>
-                                    <div class="col-md-6">
+                                    <div class="col-md-12">
                                         <div class="">
                                         <div class="form-group">
                                             <label for="event-name">Notas</label>
                                             <input  class="form-control" placeholder="Notas"type="text" [(ngModel)]="data.note" name="note" required  [ngModelOptions]="{standalone: true}">
                                         </div>
                                         </div>
+                                        <div class="">
+                                        <!-- <div class="form-group">
+                                            <label for="event-name">F.A.Q</label>
+                                            <input  class="form-control" placeholder="Pregunta"type="text" [(ngModel)]="data.p" name="note" required  [ngModelOptions]="{standalone: true}">
+                                            <input  class="form-control" placeholder="Respuesta"type="text" [(ngModel)]="data.r" name="note" required  [ngModelOptions]="{standalone: true}">
+
+                                        </div> -->
+                                        <div *ngFor="let faq of data.faqs; let i = index" class="form-group">
+                                            <label for="event-name">F.A.Q {{i + 1}}</label>
+                                            <input class="form-control" placeholder="Pregunta" type="text" [(ngModel)]="faq.p" [name]="'question' + i" required>
+                                            <input class="form-control" placeholder="Respuesta" type="text" [(ngModel)]="faq.r" [name]="'answer' + i" required>
+                                          </div>
+                                        </div>
+
                                     </div>
+                                    <button (click)="addFaq()">Agregar FAQ</button>
+
                                 </div>
                                 <div class="popup-box-actions medium void text-right">
                                   <button class="btn btn-primary" id="closeButton"  (click)="onSubmit()">Guardar!</button>

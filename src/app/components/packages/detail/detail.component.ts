@@ -20,12 +20,12 @@ export class DetailComponent implements OnInit {
       
       }
 delete(){ 
-  this.dataApiService.deleteIntegration(this.yeoman.preview.id).subscribe(response=>{
-    this.dataApiService.getAllIntegration().subscribe(response=>{
-      this.yeoman.allintegration=response;
+  this.dataApiService.deletePackages(this.yeoman.preview.id).subscribe(response=>{
+    this.dataApiService.getAllPackages().subscribe(response=>{
+      this.yeoman.allPackage=response;
     });
   });
-  this.router.navigate(['/integrationsAll']);
+  this.router.navigate(['/pacAll']);
 }
 
 cancelDelete(){}

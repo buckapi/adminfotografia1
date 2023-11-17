@@ -6,8 +6,8 @@
                 <li class="breadcrumb-item active"><a href="javascript:void(0)">Detalle</a></li>
                 <!-- <a (click)="delete()"class="btn btn-danger light btn-md ml-auto"><i class="fa fa-trash scale5 mr-3"></i>Borrar</a> -->
                 <button [swal]="
-                {title: '<strong>Borrar cliente <u></u></strong>', icon: 'error',
-                html: 'Confirma que desea eliminar esta cliente ?',
+                {title: '<strong>Borrar producto <u></u></strong>', icon: 'error',
+                html: 'Confirma que desea eliminar este producto ?',
                 showCloseButton: true,
                 showCancelButton: true,
                 cancelButtonColor: '#101554',
@@ -67,10 +67,14 @@
                                 <div class="product-detail-content text-center">
                                     <!-- Product details -->
                                     <div class="new-arrival-content pr">
-                                        <h4 class="client-name">Cliente: {{yeoman.preview.name}}</h4>
+                                        <h4 class="client-name">Producto: {{yeoman.preview.name}}</h4>
                                     </div>
                                     <div class="new-arrival-content pr">
-                                        <h4 class="client-industry">Industria: {{category}}</h4>
+                                        <h4 class="client-name">Tamaño: {{yeoman.preview.size}}</h4>
+                                        <h4 class="client-name">Descripción: {{yeoman.preview.description}}</h4>
+                                    </div>
+                                    <div class="new-arrival-content pr">
+                                        <h4 class="client-industry">Servicio: {{category}}</h4>
                                     </div>
                                 </div>
                             </div>

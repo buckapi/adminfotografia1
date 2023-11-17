@@ -17,7 +17,7 @@ export class AddclienteComponent implements AfterViewInit {
   @ViewChild('deleteSwal')
   category='Seleccione una';
   categorySeted:boolean=false;
-  clients$:any={};
+  products:any={};
 
   public captions: UploaderCaptions = {
     dropzone: {
@@ -37,6 +37,9 @@ export class AddclienteComponent implements AfterViewInit {
   data = {
     images: [] as string[], // o cualquier otro tipo de dato adecuado, como any[]
     name: '',
+    size:'',
+    description:'',
+    price:'',
     ref: '',
      idCategory: '',
   };
@@ -56,22 +59,19 @@ export class AddclienteComponent implements AfterViewInit {
       onSubmit() {
         this.data.ref = (Math.floor(Math.random() * 10000000000000)).toString();
         this.data.images=this._butler.uploaderImages;
-        this.dataApiService.saveClient(this.data).subscribe(response=>{
+        this.dataApiService.saveProduct(this.data).subscribe(response=>{
           console.log(response);
-          // this.getAll();
           this._butler.uploaderImages=[];
-          this.router.navigate(['clientall']);
+          this.router.navigate(['proAll']);
           Swal.fire({
             position: 'center',
             icon: 'success',
-            title: 'cliente guardado',
+            title: 'Producto guardado',
             showConfirmButton: false,
             timer: 1500
           })
          
-          //  this.getProducts();
         });
-        // Aquí puedes enviar los datos al servidor o realizar las acciones necesarias
         console.log(this.data);
         
         }

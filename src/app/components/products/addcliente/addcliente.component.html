@@ -17,7 +17,7 @@
 
                         <form>
                             <div class="row">
-                                <div class="col-md-6">
+                                <div class="col-md-4">
                                     <div class="">
                                       <div class="">
                                         <ngx-awesome-uploader
@@ -27,20 +27,36 @@
                                       </div>
                                     </div>
                                   </div>
-                                <div class="col-md-6">
+                                <div class="col-md-8">
                                 
                                 <div class="">
-                                    <div class="">
                                     <div class="form-group">
-                                        <label for="event-name">Nombre de cliente</label>
+                                        <label for="event-name">Nombre del producto</label>
                                         <input  class="form-control" placeholder="nombre"type="text" [(ngModel)]="data.name" name="name" required  [ngModelOptions]="{standalone: true}">
                                     </div>
+                                </div>
+                                <div class="">
+                                    <div class="form-group">
+                                        <label for="event-name">Tamaños</label>
+                                        <input  class="form-control" placeholder="medidas"type="text" [(ngModel)]="data.size" name="name" required  [ngModelOptions]="{standalone: true}">
+                                    </div>
+                                </div>
+                                <div class="">
+                                    <div class="form-group">
+                                        <label for="event-name">Descripción</label>
+                                        <input  class="form-control" placeholder="Descripción" type="text" [(ngModel)]="data.description" name="name" required  [ngModelOptions]="{standalone: true}">
+                                    </div>
+                                </div>
+                                <div class="">
+                                    <div class="form-group">
+                                        <label for="event-name">Precio</label>
+                                        <input  class="form-control" placeholder="Descripción" type="text" [(ngModel)]="data.price" name="name" required  [ngModelOptions]="{standalone: true}">
                                     </div>
                                 </div>
                                 <div class="">
                                     <div class="">
                                     <div class="form-group">
-                                        <label for="event-description">Rubro</label>
+                                        <label for="event-description">Servicio</label>
                                         
                                         <select id="category" class="form-control wide my-custom-select" [(ngModel)]="category" (ngModelChange)="setCategory(category)" [ngModelOptions]="{standalone: true}">
                                             <option *ngFor="let category of yeoman.allcategory, let i = index " [ngValue]="i"> 

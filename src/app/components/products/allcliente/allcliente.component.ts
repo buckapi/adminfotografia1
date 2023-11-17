@@ -10,26 +10,26 @@ import{NgxUiLoaderService} from 'ngx-ui-loader';
 })
 export class AllclienteComponent implements OnInit {
 category:any;
-clients:any;
-
+productos:any;
+allProducts:any;
   constructor(
     private ngxService: NgxUiLoaderService,
     public router:Router,    
     public dataApiService:DataApiService,
     public yeoman:Yeoman
     ) { 
-  this.getAll();
+  this.getAllProducts();
   }
-getAll(){
+  getAllProducts(){
   this.ngxService.start("loader-01");
-  this.dataApiService.getAllClient().subscribe(response=>{
-    this.yeoman.allclient=response;
+  this.dataApiService.getAllProducts().subscribe(response=>{
+    this.yeoman.allProducts=response;
     this.ngxService.stop("loader-01");
   });
 }
 
 setPreview(i:any){
-  this.yeoman.preview=this.yeoman.allclient[i];
+  this.yeoman.preview=this.yeoman.allProducts[i];
   this.router.navigate(['proDetail']);
 }
   ngOnInit(): void {

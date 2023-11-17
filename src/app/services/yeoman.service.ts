@@ -36,6 +36,7 @@ export class Yeoman {
     allModules:any=[];
     allAlbums:any=[];
     allPackage:any=[];
+    allProducts:any=[];
     currency:number=1;
     config: {
       clientSelected:number;

@@ -13,7 +13,7 @@
                 <div class="page-titles">
 					<ol class="breadcrumb">
 						
-						<li class="breadcrumb-item active"><a href="javascript:void(0)">Productos</a></li>
+						<li class="breadcrumb-item active"><a routerLink="../">Productos</a></li>
                         <a routerLink="../proAdd" class="btn btn-primary light btn-md ml-auto"><i class="fa fa-plus scale5 mr-3"></i>Agregar Producto</a>
                          
                     </ol>
@@ -21,18 +21,19 @@
                 </div>
                 
                 <div class="row">
-                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6" *ngFor="let client of yeoman.allclient;let i = index"  (click)="setPreview(i)" style="cursor: pointer;" >
+                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6" *ngFor="let products of yeoman.allProducts;let i = index"  (click)="setPreview(i)" style="cursor: pointer;" >
                         <div class="card" >
                             <div class="card-body">
                                 <div class="new-arrival-product">
                                     <div class="new-arrivals-img-contnent">
-                                        <img class="img-fluid" src="assets/gymove/images/product/1.jpg" alt="" *ngIf="client.images[0]===undefined">
-                                        <img class="img-fluid" src="{{client.images[0]}}" alt="" *ngIf="client.images[0]!==undefined">
+                                        <img class="img-fluid" src="assets/gymove/images/product/1.jpg" alt="" *ngIf="products.images[0]===undefined">
+                                        <img class="img-fluid" src="{{products.images[0]}}" alt="" *ngIf="products.images[0]!==undefined">
                                   
                                     </div>
                                     <div class="new-arrival-content text-center mt-3">
-                                        <h4><a >{{client.name}}</a></h4>
-                                      
+                                        <h4><a >{{products.name}}</a></h4>
+                                        <h4><a >{{products.size}}</a></h4>
+                                        <h4><a >{{products.price}}</a></h4>
                                     </div>
                                 </div>
                             </div>

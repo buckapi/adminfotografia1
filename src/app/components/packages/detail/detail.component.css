@@ -15,5 +15,13 @@
     color: #007bff; /* Cambia el color de texto a azul */
     font-weight: normal; /* Restaura el peso de la fuente a normal */
 }
+.text-center {
+    text-align: left !important;
+}
+.new-arrival-content h4 {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
 
 /* Puedes agregar más estilos según tus necesidades */

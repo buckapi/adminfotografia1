@@ -30,7 +30,7 @@ getAllAlbums(){
 
 setPreview(i:any){
   this.yeoman.preview=this.yeoman.allAlbums[i];
-  this.router.navigate(['testdetail']);
+  this.router.navigate(['albDetail']);
 }
   ngOnInit(): void {
   }

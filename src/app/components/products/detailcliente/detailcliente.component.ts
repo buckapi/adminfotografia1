@@ -21,10 +21,10 @@ export class DetailclienteComponent implements OnInit {
       }
 
 delete(){ 
-  this.dataApiService.deleteClient(this.yeoman.preview.id).subscribe(response=>{
-    this.dataApiService.getAllClient().subscribe(response=>{
+  this.dataApiService.deleteProduct(this.yeoman.preview.id).subscribe(response=>{
+    this.dataApiService.getAllProducts().subscribe(response=>{
       
-      this.yeoman.all=response;
+      this.yeoman.allProducts=response;
     });
   });
   this.router.navigate(['/proAll']);

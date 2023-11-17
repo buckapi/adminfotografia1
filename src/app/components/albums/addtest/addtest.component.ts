@@ -14,9 +14,9 @@ import { Router } from '@angular/router';
 })
 export class AddtestComponent implements AfterViewInit {
   @ViewChild('deleteSwal')
- 
+  category='Seleccione una';
+  categorySeted:boolean=false;
   
-  testimony:any;
   public captions: UploaderCaptions = {
     dropzone: {
       title: 'Imágenes del producto',
@@ -35,13 +35,8 @@ export class AddtestComponent implements AfterViewInit {
   data = {
     images: [] as string[], // o cualquier otro tipo de dato adecuado, como any[]
     name: '',
-    description: '',
-    price: null,
-    stock: 0,
     ref: '',
-    idBranch: '',
-    detail: '',
-    company:''
+    idCategory: '',
   };
  
   adapter = new  DemoFilePickerAdapter(this.http,this._butler);
@@ -51,8 +46,11 @@ export class AddtestComponent implements AfterViewInit {
     public _butler:Butler,
     public dataApiService:DataApiService,
     public yeoman:Yeoman
-    ) { 
-      this._butler.data=this.data;}
+    ) 
+    { 
+      this.getAllCategories();
+      this._butler.data=this.data;
+    }
       onSubmit() {
         this.data.ref = (Math.floor(Math.random() * 10000000000000)).toString();
         this.data.images=this._butler.uploaderImages;
@@ -60,7 +58,7 @@ export class AddtestComponent implements AfterViewInit {
           console.log(response);
           // this.getAll();
           this._butler.uploaderImages=[];
-          this.router.navigate(['alball']);
+          this.router.navigate(['albAll']);
           Swal.fire({
             position: 'center',
             icon: 'success',
@@ -75,6 +73,28 @@ export class AddtestComponent implements AfterViewInit {
         console.log(this.data);
         
         }
+        getAllCategories(){
+          this.dataApiService.getAllCategory().subscribe(response=>{
+            this.yeoman.categories=response;
+            this.yeoman.allcategory=response;
+            this.yeoman.allCategoriesSize= this.yeoman.categories.length;
+          });
+        }
+       
+        onCategorySelect(category:any) {        
+          this.data.idCategory = "c"+category.id;
+          console.log(category.id);
+        }
+        
+        setCategory(category:any){
+          let index=category;
+          console.log("seleccionada: "+this.yeoman.allcategory[index].name);
+          this.categorySeted=true;
+          if (this.yeoman.categories!==undefined){
+          this.data.idCategory=this.yeoman.allcategory[index].id;
+          console.log("id: "+JSON.stringify(this.data.idCategory));
+          }
+          }
     ngAfterViewInit(): void {
   }
 

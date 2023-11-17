@@ -24,7 +24,7 @@ delete(){
       this.yeoman.allAlbums=response;
     });
   });
-  this.router.navigate(['/alball']);
+  this.router.navigate(['/albAll']);
 }
 cancelDelete(){}
   ngOnInit(): void {

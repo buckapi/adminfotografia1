@@ -17,7 +17,7 @@
 
                         <form>
                             <div class="row">
-                                <div class="col-md-6">
+                                <div class="col-md-4">
                                     <div class="">
                                       <div class="">
                                         <ngx-awesome-uploader
@@ -26,33 +26,27 @@
                                         </ngx-awesome-uploader>
                                       </div>
                                     </div>
-                                  </div>
+                                </div>
                                
-                                <div class="col-md-6">
+                                <div class="col-md-8">
                                     <div class="">
-                                        <div class="">
                                         <div class="form-group">
                                             <label for="event-name">Nombre del album</label>
                                             <input  class="form-control" placeholder="nombre"type="text" [(ngModel)]="data.name" name="name" required  [ngModelOptions]="{standalone: true}">
                                         </div>
-                                        </div>
                                     </div>
                                     <div class="">
-                                        <div class="">
                                         <div class="form-group">
-                                            <label for="event-name">Seleccione el servicio al que pertenece</label>
-                                            <input  class="form-control" placeholder="Empresa o compañia" type="text" [(ngModel)]="data.company" name="name" required  [ngModelOptions]="{standalone: true}">
-                                        </div>
+                                            <label for="event-description">Servicio</label>
+                                            
+                                            <select id="category" class="form-control wide my-custom-select" [(ngModel)]="category" (ngModelChange)="setCategory(category)" [ngModelOptions]="{standalone: true}">
+                                                <option *ngFor="let category of yeoman.allcategory, let i = index " [ngValue]="i"> 
+                                                    <span   style="cursor:pointer;">{{category.name}}</span>
+                                                </option>
+                                            </select>
                                         </div>
                                     </div>
-                                 <!--    <div class="">
-                                        <div class="">
-                                        <div class="form-group">
-                                            <label for="event-name">Opinión de cliente</label>
-                                            <input  class="form-control" placeholder="Testimonio"type="text" [(ngModel)]="data.detail" name="name" required  [ngModelOptions]="{standalone: true}">
-                                        </div>
-                                        </div>
-                                    </div> -->
+                               
                                 </div>
                             </div>
                             <div class="popup-box-actions medium void text-right">

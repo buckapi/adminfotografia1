@@ -16,7 +16,11 @@ declare const XM_Popup: any;
 export class HomeComponent implements OnInit {
   existencias: any[] = []; 
   all: any[] = []; 
-  allcategory: any[] = []; 
+  allcategory: any[] = [];
+  allProducts: any[] = [];
+  allAlbums: any[] = [];
+  allProductsSize:number=0;
+  allAlbumsSize:number=0;
   existenciasSize:number=0;
   allSize:number=0;
 
@@ -28,21 +32,23 @@ export class HomeComponent implements OnInit {
     public script:ScriptService,public yeoman:Yeoman,
     public dataApiService:DataApiService
   ) { 
-    this.getTestimonials();
+
     this.dataApiService.getAllProducts().subscribe(response=>{
-      this.yeoman.all=response;
-      this.allSize=this.yeoman.all.length;
-      console.log(this.allSize);
-      
+      this.yeoman.allProducts=response;
+      this.yeoman.allProductsSize=this.yeoman.allProducts.length;
     });
     this.dataApiService.getAllCategory().subscribe(response=>{
       this.yeoman.allcategory=response;
       this.yeoman.allCategoriesSize=this.yeoman.allcategory.length;
 
     });
-    this.dataApiService.getAllClient().subscribe(response=>{
-      this.yeoman.allclient=response;
-      this.yeoman.allClientsSize=this.yeoman.allclient.length;
+    this.dataApiService.getAllPackages().subscribe(response=>{
+      this.yeoman.allPackage=response;
+      this.yeoman.allPackagesSize=this.yeoman.allPackage.length;
+    });
+    this.dataApiService.getAllAlbums().subscribe(response=>{
+      this.yeoman.allAlbums=response;
+      this.yeoman.allAlbumsSize=this.yeoman.allAlbums.length;
     });
     
     if(!this.authRESTService.getCurrentUser() ){this.router.navigate(['/login'])}
@@ -78,13 +84,6 @@ export class HomeComponent implements OnInit {
     },
   };  
 
-  getTestimonials(){
-    // this.ngxService.start("loader-01");
-    this.dataApiService.getAllTestimony().subscribe(response=>{
-      this.yeoman.alltestimony=response;
-      // this.ngxService.stop("loader-01");
-    });
-  }
 
   ngOnInit(): void {
   }

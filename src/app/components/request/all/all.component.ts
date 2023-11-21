@@ -16,19 +16,19 @@ export class AllComponent implements OnInit {
     public dataApiService:DataApiService,
      public yeoman:Yeoman
      ) { 
-  this.getAllModules();
+  this.getAllRequest();
   }
-getAllModules(){
+getAllRequest(){
   this.ngxService.start("loader-01");
-  this.dataApiService.getAllModules().subscribe(response=>{
-    this.yeoman.allModules=response;
+  this.dataApiService.getAllRequest().subscribe(response=>{
+    this.yeoman.allRequest=response;
     this.ngxService.stop("loader-01");
     
   });
 }
 
 setPreview(i:any){
-  this.yeoman.preview=this.yeoman.allModules[i];
+  this.yeoman.preview=this.yeoman.allRequest[i];
   this.router.navigate(['modulesDetail']);
 }
   ngOnInit(): void {

@@ -4,7 +4,7 @@
       <div class="row">
           <div class="col-xl-12 col-xxl-12">
               <div class="row">
-                <div class="col-lg-3 col-sm-6"  routerLink="servAll" style="cursor: pointer;">
+                <div class="col-lg-4 col-sm-6"  routerLink="servAll" style="cursor: pointer;">
                     <div class="card avtivity-card">
                         <div class="card-body">
                             <div class="media align-items-center">
@@ -26,7 +26,7 @@
                         <div class="effect bg-info"></div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-sm-6"  routerLink="pacAll" style="cursor: pointer;">
+                <div class="col-lg-4 col-sm-6"  routerLink="pacAll" style="cursor: pointer;">
                     <div class="card avtivity-card">
                         <div class="card-body">
                             <div class="media align-items-center">
@@ -50,46 +50,21 @@
                         <div class="effect bg-info"></div>
                     </div>
                 </div>
-                  <div class=" col-lg-3 col-sm-6"  routerLink="proAll" style="cursor: pointer;">
-                      <div class="card avtivity-card">
-                          <div class="card-body">
-                              <div class="media align-items-center">
-                                  <span class="activity-icon bgl-success mr-md-4 mr-3">
-                                    <!-- <img src="assets/gymove/assets/gymove/images/ordenes.png" alt="" height="64"> -->
-                                    <i class="fa flaticon-381-layer scale5 mr-3"></i>
-                                  </span>
-                                  <div class="media-body">
-                                      <p class="fs-14 mb-2">Productos</p>
-                                      <span class="title text-black font-w600" *ngIf="yeoman.allProductsSize<=0"> Loading ... </span>
-                                      <span class="title text-black font-w600" *ngIf="yeoman.allProductsSize>0">{{yeoman.allProductsSize}} Productos </span>
-                             
-                                     
-                                    </div>
-                              </div>
-                              <div class="progress" style="height:5px;">
-                                  <div class="progress-bar bg-success" style="width: 42%; height:5px;" role="progressbar">
-                                      <span class="sr-only">42% Complete</span>
-                                  </div>
-                              </div>
-                          </div>
-                          <div class="effect bg-success"></div>
-                      </div>
-                  </div>
-                  <div class=" col-lg-3 col-sm-6"  routerLink="albAll" style="cursor: pointer;">
+                <div class=" col-lg-4 col-sm-6"  routerLink="proAll" style="cursor: pointer;">
                     <div class="card avtivity-card">
                         <div class="card-body">
                             <div class="media align-items-center">
                                 <span class="activity-icon bgl-success mr-md-4 mr-3">
-                                  <!-- <img src="assets/gymove/assets/gymove/images/ordenes.png" alt="" height="64"> -->
-                                  <i class="fa flaticon-381-layer scale5 mr-3"></i>
+                                <!-- <img src="assets/gymove/assets/gymove/images/ordenes.png" alt="" height="64"> -->
+                                <i class="fa flaticon-381-layer scale5 mr-3"></i>
                                 </span>
                                 <div class="media-body">
-                                    <p class="fs-14 mb-2">Albums</p>
-                                    <span class="title text-black font-w600" *ngIf="yeoman.allAlbumsSize<=0"> Loading ... </span>
-                                    <span class="title text-black font-w600" *ngIf="yeoman.allAlbumsSize>0">{{yeoman.allAlbumsSize}} Albums </span>
-                           
-                                   
-                                  </div>
+                                    <p class="fs-14 mb-2">Productos</p>
+                                    <span class="title text-black font-w600" *ngIf="yeoman.allProductsSize<=0"> Loading ... </span>
+                                    <span class="title text-black font-w600" *ngIf="yeoman.allProductsSize>0">{{yeoman.allProductsSize}} Productos </span>
+                            
+                                    
+                                </div>
                             </div>
                             <div class="progress" style="height:5px;">
                                 <div class="progress-bar bg-success" style="width: 42%; height:5px;" role="progressbar">
@@ -99,6 +74,56 @@
                         </div>
                         <div class="effect bg-success"></div>
                     </div>
+                </div>
+                <div class=" col-lg-4 col-sm-6"  routerLink="albAll" style="cursor: pointer;">
+                <div class="card avtivity-card">
+                    <div class="card-body">
+                        <div class="media align-items-center">
+                            <span class="activity-icon bgl-success mr-md-4 mr-3">
+                                <!-- <img src="assets/gymove/assets/gymove/images/ordenes.png" alt="" height="64"> -->
+                                <i class="fa flaticon-381-layer scale5 mr-3"></i>
+                            </span>
+                            <div class="media-body">
+                                <p class="fs-14 mb-2">Albums</p>
+                                <span class="title text-black font-w600" *ngIf="yeoman.allAlbumsSize<=0"> Loading ... </span>
+                                <span class="title text-black font-w600" *ngIf="yeoman.allAlbumsSize>0">{{yeoman.allAlbumsSize}} Albums </span>
+                        
+                                
+                                </div>
+                        </div>
+                        <div class="progress" style="height:5px;">
+                            <div class="progress-bar bg-success" style="width: 42%; height:5px;" role="progressbar">
+                                <span class="sr-only">42% Complete</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="effect bg-success"></div>
+                </div>
+                </div>
+                <div class=" col-lg-4 col-sm-6"  routerLink="requestAll" style="cursor: pointer;">
+                <div class="card avtivity-card">
+                    <div class="card-body">
+                        <div class="media align-items-center">
+                            <span class="activity-icon bgl-success mr-md-4 mr-3">
+                                <!-- <img src="assets/gymove/assets/gymove/images/ordenes.png" alt="" height="64"> -->
+                                <i class="fa flaticon-381-layer scale5 mr-3"></i>
+                            </span>
+                            <div class="media-body">
+                                <p class="fs-14 mb-2">solicitudes</p>
+                                <span class="title text-black font-w600" *ngIf="yeoman.allRequestSize<=0"> Loading ... </span>
+                                <span class="title text-black font-w600" *ngIf="yeoman.allRequestSize>0">{{yeoman.allRequestSize}} Albums </span>
+                        
+                                
+                                </div>
+                        </div>
+                        <div class="progress" style="height:5px;">
+                            <div class="progress-bar bg-success" style="width: 42%; height:5px;" role="progressbar">
+                                <span class="sr-only">42% Complete</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="effect bg-success"></div>
+                </div>
                 </div>
                  
                   <!-- <div class="col-sm-6">

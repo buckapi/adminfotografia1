@@ -183,6 +183,10 @@ export class DataApiService {
 		const url_api = 	this.yeoman.origin.restUrl+'/api/packages';
 		return this.http.get(url_api);
 	}
+	getAllRequest(){
+		const url_api = 	this.yeoman.origin.restUrl+'/api/requests';
+		return this.http.get(url_api);
+	}
 
 	
 
@@ -257,6 +261,13 @@ export class DataApiService {
 		.put<ProductInterface>(url_api, part)
 		.pipe(map(data => data));
 	}
+	requestUpdate(part :ProductInterface, id: string){
+		// let token = this.authService.getToken();
+		const url_api=	this.yeoman.origin.restUrl+`/api/requests/${id}`;
+		return this.http
+		.put<ProductInterface>(url_api, part)
+		.pipe(map(data => data));
+	}
 	
 	
 
@@ -318,6 +329,12 @@ export class DataApiService {
 	}
 	savePackages(client :ProductInterface){
 		const url_api=	this.yeoman.origin.restUrl+'/api/packages';
+		return this.http
+		.post<ProductInterface>(url_api, client)
+		.pipe(map(data => data));
+	}
+	saveRequest(client :ProductInterface){
+		const url_api=	this.yeoman.origin.restUrl+'/api/requests';
 		return this.http
 		.post<ProductInterface>(url_api, client)
 		.pipe(map(data => data));

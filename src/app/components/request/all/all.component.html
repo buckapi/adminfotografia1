@@ -1,0 +1,73 @@
+<ngx-ui-loader 
+[pbColor]="'#0A60C2'"  
+[bgsColor]="'#0A60C2'"
+[fgsColor]="'#0A60C2'"
+[text]="'Cargando...'"
+[fgsSize]="15"
+[fgsType]= "'cube-grid'"
+[textColor]="'#0A60C2'"
+[overlayColor]="' rgba(255,255,255,0.8)'">
+</ngx-ui-loader>
+ <div class="content-body">
+            <div class="container-fluid">
+                <div class="page-titles">
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item"><a routerLink="../">Dashboard</a></li>
+						<li class="breadcrumb-item active"><a>Solicitudes</a></li>
+ <!--                         <a routerLink="../modulesAdd" class="btn btn-primary light btn-md ml-auto"><i class="fa fa-plus scale5 mr-3"></i>Agregar módulo</a>
+ -->                         
+                    </ol>
+                    
+                </div>
+                
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">Solicitudes</h4>
+                            </div>
+                            <div class="card-body" *ngFor="let request of yeoman.allRequest;let i = index"  (click)="setPreview(i)" style="cursor: pointer;">
+                                <div class="table-responsive">
+                                    <table class="table table-responsive-md">
+                                        <thead>
+                                            <tr>
+                                                <!-- <th class="width80">#</th> -->
+                                                <th>Nombre</th>
+                                                <th>Email</th>
+                                                <th>Teléfono</th>
+                                                <th>Paquete</th>
+                                                <th>Precio</th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+<!--                                                 <td><strong>01</strong></td>
+ -->                                                <td>{{request.name}}</td>
+                                                <td>{{request.email}}</td>
+                                                <td>{{request.phone}}</td>
+                                                <td><span class="badge light badge-success">{{request.makeup}}</span></td>
+                                                <td>$21.56</td>
+                                                <td>
+                                                    <div class="dropdown">
+                                                        <button type="button" class="btn btn-success light sharp" data-toggle="dropdown">
+                                                            <svg width="20px" height="20px" viewBox="0 0 24 24" version="1.1"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><rect x="0" y="0" width="24" height="24"/><circle fill="#000000" cx="5" cy="12" r="2"/><circle fill="#000000" cx="12" cy="12" r="2"/><circle fill="#000000" cx="19" cy="12" r="2"/></g></svg>
+                                                        </button>
+                                                        <div class="dropdown-menu">
+                                                            <a class="dropdown-item" href="">Edit</a>
+                                                            <a class="dropdown-item" href="">Delete</a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                           
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+
+        </div>
+        

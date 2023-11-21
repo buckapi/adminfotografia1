@@ -16,6 +16,7 @@ export class Yeoman {
   allPackagesSize:number=0;
   allProductsSize:number=0;
   allAlbumsSize:number=0;
+  allRequestSize:number=0;
     virtualRoute:any="dashboard";
     pop:Boolean=false;
     data:any={};
@@ -33,6 +34,8 @@ export class Yeoman {
     allintegration:any=[];
     modules:any={};
     package:any={};
+    request:any={};
+    allRequest:any=[];
     allModules:any=[];
     allAlbums:any=[];
     allPackage:any=[];

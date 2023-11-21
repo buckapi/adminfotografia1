@@ -31,22 +31,15 @@ const routes: Routes = [
 
   { path: 'pacDetail', loadChildren: () => import('./components/packages/detail/detail.module').then(m => m.DetailModule) },
   
+  { path: 'requestAll', loadChildren: () => import('./components/request/all/all.module').then(m => m.AllModule) },
+
   /*   
   { path: 'solutionDetail', loadChildren: () => import('./components/click2order/detail/detail.module').then(m => m.DetailModule) },
-  
   { path: 'solutionAll', loadChildren: () => import('./components/click2order/all/all.module').then(m => m.AllModule) },
-  
   { path: 'solutionAdd', loadChildren: () => import('./components/click2order/add/add.module').then(m => m.AddModule) },
- 
-  { path: 'modulesAll', loadChildren: () => import('./components/modules/all/all.module').then(m => m.AllModule) },
-  
   { path: 'modulesAdd', loadChildren: () => import('./components/modules/add/add.module').then(m => m.AddModule) },
-
   { path: 'modulesDetail', loadChildren: () => import('./components/modules/detail/detail.module').then(m => m.DetailModule) },
   */
-  
-
- 
   
   
 ];

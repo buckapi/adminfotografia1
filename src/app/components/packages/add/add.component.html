@@ -50,26 +50,22 @@
                                                 <label for="event-name">Descripción</label>
                                                 <input  class="form-control" placeholder="Descripción"type="text" [(ngModel)]="data.description" name="description" required  [ngModelOptions]="{standalone: true}">
                                             </div>
-                                            <!-- <div class="form-group">
-                                                <label for="event-name">Lugar de sesion</label>
-                                                <input  class="form-control" placeholder="Lugar de sesion"type="text" [(ngModel)]="data.placeSession" name="placeSession" required  [ngModelOptions]="{standalone: true}">
-                                            </div> -->
-                                            <!-- <div class="form-group" *ngFor="let place of data.placeSessions; let i = index">
-                                                <label for="include-{{i}}">Lugar de sesion? {{i + 1}}</label>
-                                                <input class="form-control" placeholder="Items" type="text" [(ngModel)]="data.placeSessions[i]" [name]="'placeSession' + i" required>
-                                            </div> -->
                                             <div *ngFor="let placeSession of data.placeSessions; let i = index" class="form-group">
                                                 <label for="event-name">Lugar de sesion: {{i + 1}}</label>
                                                 <input class="form-control" placeholder="Items" type="text" [(ngModel)]="placeSession.place" [name]="'placeSession' + i" required>
                                             </div>
+                                            <button class="btn btn-primary" (click)="addPlaceSession()" style=" margin: 10px;"><i class="fa fa-plus"></i> Agregar lugar de sesion </button>
+
                                             <div class="form-group">
                                                 <label for="event-name">Numero de personas</label>
                                                 <input  class="form-control" placeholder="Numero de personas"type="text" [(ngModel)]="data.numberPeople" name="numberPeople" required  [ngModelOptions]="{standalone: true}">
                                             </div>
-                                           
+                                            <div class="form-group">
+                                                <label for="event-name">Precio</label>
+                                                <input  class="form-control" placeholder="Precio"type="text" [(ngModel)]="data.price" name="price" required  [ngModelOptions]="{standalone: true}">
+                                            </div>
                                             
                                         </div>
-                                        <button class="btn btn-primary" (click)="addPlaceSession()" style=" margin: 10px;"><i class="fa fa-plus"></i> Agregar lugar de sesion </button>
 
                                     </div>
                                 </div>
@@ -80,18 +76,18 @@
                                                 <label for="event-name">Cantidad de fotos</label>
                                                 <input  class="form-control" placeholder="Cantidad de fotos"type="text" [(ngModel)]="data.numberPhoto" name="numberPhoto" required  [ngModelOptions]="{standalone: true}">
                                             </div>
-                                            <div class="form-group">
+                                            <div *ngFor="let numberSession of data.numberSessions; let i = index" class="form-group">
+                                                <label for="event-name">Sesiones {{i + 1}}</label>
+                                                <input class="form-control" placeholder="Items" type="text" [(ngModel)]="numberSession.sesion" [name]="'numberSession' + i" required>
+                                            </div>
+                                            <button class="btn btn-primary" (click)="addSesion()" style=" margin: 10px"><i class="fa fa-plus"></i> Agregar Sesiones</button>
+
+                                           <!--  <div class="form-group">
                                                 <label for="event-name">Cantidad de sesiones</label>
                                                 <input  class="form-control" placeholder="Cantidad de sesiones"type="text" [(ngModel)]="data.numberSession" name="numberSession" required  [ngModelOptions]="{standalone: true}">
-                                            </div>
-                                            <!-- <div class="form-group" *ngFor="let clothing of data.clothings; let i = index">
-                                                <label for="include-{{i}}">Vestuario, que incluye? {{i + 1}}</label>
-                                                <input class="form-control" placeholder="Items" type="text" [(ngModel)]="data.clothings[i]" [name]="'clothing' + i" required>
                                             </div> -->
-                                            <div *ngFor="let clothing of data.clothings; let i = index" class="form-group">
-                                                <label for="event-name">Vestuario {{i + 1}}</label>
-                                                <input class="form-control" placeholder="Items" type="text" [(ngModel)]="clothing.cloth" [name]="'clothing' + i" required>
-                                            </div>
+                                           
+
                                         </div>
                                     </div>
                                     <div class="col-md-6">
@@ -101,29 +97,27 @@
                                                 <label for="event-name">Duración</label>
                                                 <input  class="form-control" placeholder="Duración"type="text" [(ngModel)]="data.duration" name="duration" required  [ngModelOptions]="{standalone: true}">
                                             </div>
-                                            <div class="form-group">
-                                                <label for="event-name">Precio</label>
-                                                <input  class="form-control" placeholder="Precio"type="text" [(ngModel)]="data.price" name="price" required  [ngModelOptions]="{standalone: true}">
-                                            </div>
+                                           
                                             <!-- <div class="form-group" *ngFor="let include of data.includes; let i = index">
                                                 <label for="include-{{i}}">Que incluye los Albums? {{i + 1}}</label>
                                                 <input class="form-control" placeholder="Items" type="text" [(ngModel)]="data.includes[i]" [name]="'include' + i" required>
-                                            </div> -->
-                                            <div *ngFor="let include of data.includes; let i = index" class="form-group">
-                                                <label for="event-name">Includes {{i + 1}}</label>
-                                                <input class="form-control" placeholder="Items" type="text" [(ngModel)]="include.inclu" [name]="'include' + i" required>
+                                            </div> --> <div *ngFor="let clothing of data.clothings; let i = index" class="form-group">
+                                                <label for="event-name">Vestuario {{i + 1}}</label>
+                                                <input class="form-control" placeholder="Items" type="text" [(ngModel)]="clothing.cloth" [name]="'clothing' + i" required>
                                             </div>
-                                           
+                                            <button class="btn btn-primary" (click)="addCloting()" style=" margin: 10px;"><i class="fa fa-plus"></i> Agregar items de vestuario </button>
+                                            
                                             
                                         </div>
                                         
                                     </div>
                                     <div class="col-md-12">
-                                        <div class="">
-                                            <button class="btn btn-primary" (click)="addCloting()" style=" margin: 10px;"><i class="fa fa-plus"></i> Agregar items sobre que incluye vestuario </button>
-
-                                            <button class="btn btn-primary" (click)="addInclude()" style=" margin: 10px"><i class="fa fa-plus"></i> Agregar items sobre que incluye Album </button>
+                                        <div *ngFor="let include of data.includes; let i = index" class="form-group">
+                                            <label for="event-name">Que incluye el album {{i + 1}}</label>
+                                            <input class="form-control" placeholder="Items" type="text" [(ngModel)]="include.inclu" [name]="'include' + i" required>
                                         </div>
+                                        <button class="btn btn-primary" (click)="addInclude()" style=" margin: 10px"><i class="fa fa-plus"></i> Agregar items de Albums </button>
+
                                         <div class="form-group">
                                             <div *ngFor="let note of data.notes; let i = index" class="form-group">
                                                 <label for="event-name">Notas {{i + 1}}</label>

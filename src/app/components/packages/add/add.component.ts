@@ -47,7 +47,7 @@ export class AddComponent implements AfterViewInit {
     clothings: [{cloth:'' }],
     numberPhoto: '',
     price:'',
-    numberSession:'',
+    numberSessions:[{sesion:''}],
     duration:'',
     notes:[{not:''}],
     includes:[{inclu:''}],
@@ -125,6 +125,9 @@ export class AddComponent implements AfterViewInit {
         }
         addNote() {
           this.data.notes.push({not:''});
+        }
+        addSesion(){
+          this.data.numberSessions.push({sesion:''});
         }
     ngAfterViewInit(): void {
   }

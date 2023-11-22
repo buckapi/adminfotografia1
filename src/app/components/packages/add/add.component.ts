@@ -42,18 +42,16 @@ export class AddComponent implements AfterViewInit {
     name: '',
     title: '',
     description: '', 
-    placeSession: '',
+    placeSessions: [{place:'' }],
     numberPeople: '',
-    clothing: '',
+    clothings: [{cloth:'' }],
     numberPhoto: '',
     price:'',
     numberSession:'',
     duration:'',
-    note:'',
-    includes:'',
+    notes:[{not:''}],
+    includes:[{inclu:''}],
     idCategory:'',
-    /* p:'',
-    r:'', */
     faqs: [{ p: '', r: '' }]
   };
 
@@ -116,9 +114,18 @@ export class AddComponent implements AfterViewInit {
         addFaq() {
           this.data.faqs.push({ p: '', r: '' });
         }
-       
-    
-
+        addInclude() {
+          this.data.includes.push({inclu:''});
+        }
+        addCloting() {
+          this.data.clothings.push({cloth:''});
+        }
+        addPlaceSession() {
+          this.data.placeSessions.push({place:''});
+        }
+        addNote() {
+          this.data.notes.push({not:''});
+        }
     ngAfterViewInit(): void {
   }
 

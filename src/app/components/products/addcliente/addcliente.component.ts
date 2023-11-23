@@ -39,7 +39,7 @@ export class AddclienteComponent implements AfterViewInit {
     name: '',
     size:'',
     description:'',
-    price:'',
+   /*  price:'', */
     ref: '',
      idCategory: '',
   };

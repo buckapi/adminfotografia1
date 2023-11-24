@@ -44,6 +44,7 @@ export class AddcategoryComponent implements AfterViewInit {
     description2: '',
     description3: '',
     ref: '',
+    itemServices: [{item:'' }]
   /*   package:'' */
   };
  
@@ -76,6 +77,9 @@ export class AddcategoryComponent implements AfterViewInit {
         // Aquí puedes enviar los datos al servidor o realizar las acciones necesarias
         console.log(this.data);
         
+        }
+        addItemService() {
+          this.data.itemServices.push({item:''});
         }
     ngAfterViewInit(): void {
   }

@@ -51,10 +51,11 @@
                                         <input  class="form-control" placeholder="Descripción"type="text" [(ngModel)]="data.description3" name="description" required  [ngModelOptions]="{standalone: true}">
                                     </div>
                                     </div>
-                                    <!-- <div class="form-group">
-                                        <label for="event-name">Paquetes</label>
-                                        <input  class="form-control" placeholder="Paquetes"type="text" [(ngModel)]="data.package" name="package" required  [ngModelOptions]="{standalone: true}">
-                                    </div> -->
+                                    <div *ngFor="let itemService of data.itemServices; let i = index" class="form-group">
+                                        <label for="event-name">Item (servicios): {{i + 1}}</label>
+                                        <input class="form-control" placeholder="Item" type="text" [(ngModel)]="itemService.item" [name]="'itemService' + i" required>
+                                    </div>
+                                    <button class="btn btn-primary" (click)="addItemService()" style=" margin: 10px;"><i class="fa fa-plus"></i> Agregar item </button>
                                     </div>
                                 </div>
                             </div>

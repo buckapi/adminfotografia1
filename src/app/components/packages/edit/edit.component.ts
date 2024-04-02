@@ -21,20 +21,20 @@ export class EditComponent implements AfterViewInit {
    integration:any={}; 
    products$:any={};
    public captions: UploaderCaptions = {
-     dropzone: {
-       title: 'Imágenes del producto',
-       or: '.',
-       browse: 'Cargar',
-     },
-     cropper: {
-       crop: 'Cortar',
-       cancel: 'Cancelar',
-     },
-     previewCard: {
-       remove: 'Borrar',
-       uploadError: 'error',
-     },
-   };
+    dropzone: {
+      title: 'Imágenes del servicio',
+      or: '.',
+      browse: 'Cargar',
+    },
+    cropper: {
+      crop: 'Cortar',
+      cancel: 'Cancelar',
+    },
+    previewCard: {
+      remove: 'Borrar',
+      uploadError: 'error',
+    },
+  };
 
   data = {
     images: [] as string[], // o cualquier otro tipo de dato adecuado, como any[]

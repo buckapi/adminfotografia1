@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { EditRoutingModule } from './edit-routing.module';
 import { EditComponent } from './edit.component';
 import { FormGroup, FormsModule } from '@angular/forms';
+import { FilePickerAdapter, FilePickerModule } from 'ngx-awesome-uploader';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { FormGroup, FormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     EditRoutingModule,
-    FormsModule
+    FormsModule,
+    FilePickerModule
   ]
 })
 export class EditModule { }

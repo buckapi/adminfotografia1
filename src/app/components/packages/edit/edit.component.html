@@ -19,12 +19,12 @@
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="">
-                                        <!-- <div class="">
+                                        <div class="">
                                             <ngx-awesome-uploader [adapter]="adapter" [captions]="captions">
                                             </ngx-awesome-uploader>
-                                        </div> -->
+                                        </div>
                                     </div>
-                                  </div>
+                                    </div> 
                                 <div class="col-md-8">
                                     <div class="">
                                         <div class="form-group">
@@ -35,7 +35,7 @@
                                             <label for="event-name">Nombre del paquete</label>
                                             <input  class="form-control" placeholder="nombre"type="text" [(ngModel)]="data.name" name="name" required  [ngModelOptions]="{standalone: true}">
                                         </div>
-                                        <div class="form-group">
+                                       <!--  <div class="form-group">
                                             <label for="event-description">Seleccione servicio al que petenece este paquete</label>
                                             
                                             <select id="category" class="form-control wide my-custom-select" [(ngModel)]="category" (ngModelChange)="setCategory(category)" [ngModelOptions]="{standalone: true}">
@@ -43,17 +43,16 @@
                                                     <span   style="cursor:pointer;">{{category.name}}</span>
                                                 </option>
                                             </select>
-                                        </div>
+                                        </div> -->
                                         <div class="form-group">
                                             <label for="event-name">Descripción</label>
                                             <input  class="form-control" placeholder="Descripción"type="text" [(ngModel)]="data.description" name="description" required  [ngModelOptions]="{standalone: true}">
                                         </div>
-                                        <!-- <div *ngFor="let placeSession of data.placeSessions; let i = index" class="form-group">
+                                         <div *ngFor="let placeSession of data.placeSessions; let i = index" class="form-group">
                                             <label for="event-name">Lugar de sesion: {{i + 1}}</label>
                                             <input class="form-control" placeholder="Items" type="text" [(ngModel)]="placeSession.place" [name]="'placeSession' + i" required>
                                         </div>
                                         <button class="btn btn-primary" (click)="addPlaceSession()" style=" margin: 10px;"><i class="fa fa-plus"></i> Agregar lugar de sesion </button>
- -->
                                         
                                         <div class="form-group">
                                             <label for="event-name">Precio</label>

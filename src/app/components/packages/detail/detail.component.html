@@ -48,42 +48,38 @@
                                 <!-- Detalles de texto centrados -->
                                 <div class="product-detail-content text-center">
                                     <!-- Product details -->
-                                    <div class="new-arrival-content pr">
-                                        <h4 class="client-name"><strong>Titulo: </strong>{{yeoman.preview.title}}</h4>
-                                    </div>
+                                   
                                     <div class="new-arrival-content pr">
                                         <h4 class="client-name"><strong>Nombre del paquete: </strong>{{yeoman.preview.name}}</h4>
                                     </div>
-                                    
-                                    <div class="new-arrival-content pr">
-                                        <h4 class="client-name"><strong>Descripción: </strong>{{yeoman.preview.description}}</h4>
-                                    </div>
-                                    <div class="new-arrival-content pr">
-                                        <h4 class="client-name"><strong>Estudio / espacios: </strong>{{yeoman.preview.placeSession}}</h4>
-                                    </div>
-                                    <div class="new-arrival-content pr">
-                                        <h4 class="client-name"><strong>Numero de personas: </strong>{{yeoman.preview.numberPeople}}</h4>
-                                    </div>
-                                    <div class="new-arrival-content pr">
-                                        <h4 class="client-name"><strong>Vestuario: </strong>{{yeoman.preview.clothing}}</h4>
-                                    </div>
-                                    <div class="new-arrival-content pr">
-                                        <h4 class="client-name"><strong>Numero de fotos: </strong>{{yeoman.preview.numberPhoto}}</h4>
-                                    </div>
-                                    <div class="new-arrival-content pr">
-                                        <h4 class="client-name"><strong>Numero de sessiones: </strong>{{yeoman.preview.numberSession}}</h4>
-                                    </div>
-                                    <div class="new-arrival-content pr">
-                                        <h4 class="client-name"><strong>Duración: </strong>{{yeoman.preview.duration}}</h4>
-                                    </div>
-                                    <div class="new-arrival-content pr">
-                                        <h4 class="client-name"><strong>Notas: </strong>{{yeoman.preview.note}}</h4>
-                                    </div>
-                                    <div class="new-arrival-content pr">
-                                        <h4 class="client-name"><strong>Que incluye extra: </strong>{{yeoman.preview.includes}}</h4>
-                                    </div>
                                     <div class="new-arrival-content pr">
                                         <h4 class="client-name"><strong>Precio: </strong>{{yeoman.preview.price}}</h4>
+                                    </div>
+                                    <div class="new-arrival-content pr">
+                                        <h4 class="client-name"><strong>Lugares: </strong></h4>
+                                            <li *ngFor="let placeSession of yeoman.preview.placeSessions">{{placeSession.place}}</li>
+                                    </div>
+                                    <strong class="">Vestuario y otros items:</strong>
+                                    <ul>
+                                        <li *ngFor="let clothing of yeoman.preview.clothings"> {{clothing.cloth}}</li>
+                                    </ul>
+                                    <strong class="">¿Que incluye la sesion?</strong>
+                                    <ul>
+                                        <li> <strong> {{yeoman.preview.numberPeople}}</strong> </li>
+                                        <li *ngFor="let numberSession of yeoman.preview.numberSessions">{{numberSession.place}}</li>
+                                        <li> <strong> {{yeoman.preview.duration}}</strong></li>
+                                        <li> {{yeoman.preview.numberPhoto}}</li>
+                                        <li *ngFor="let include of yeoman.preview.includes"> {{include.inclu}}</li>
+                                    </ul>
+                                    <div class="new-arrival-content pr">
+                                        <h4 class="client-name"><strong>Notas o recomendacion: </strong></h4>
+                                        <ul>
+                                            <li *ngFor="let note of yeoman.preview.notes"> {{note.not}}</li>
+                                            <li> {{yeoman.preview.not}}</li>
+                                        </ul>
+                                    </div>
+                                    <div class="new-arrival-content pr">
+                                        <h4 class="client-name"><strong>Descripción: </strong>{{yeoman.preview.description}}</h4>
                                     </div>
                                     <div class="faq-section">
                                         <h4 class="client-name"><strong>Preguntas Frecuentes:</strong></h4>

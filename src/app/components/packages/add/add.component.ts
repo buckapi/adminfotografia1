@@ -38,6 +38,7 @@ export class AddComponent implements AfterViewInit {
 
   data = {
     images: [] as string[], // o cualquier otro tipo de dato adecuado, como any[]
+
     ref: '',
     name: '',
     title: '',
@@ -49,6 +50,8 @@ export class AddComponent implements AfterViewInit {
     price:'',
     numberSessions:[{sesion:''}],
     duration:'',
+    not:'',
+    sesion:'',
     notes:[{not:''}],
     includes:[{inclu:''}],
     idCategory:'',

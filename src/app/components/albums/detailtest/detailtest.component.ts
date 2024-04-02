@@ -18,6 +18,9 @@ export class DetailtestComponent implements OnInit {
     { 
       //  if(this.yeoman.preview.images[0]===undefined){this.router.navigate([''])}
     }
+editAlbum(){
+  this.router.navigate(['albEdit']);
+}
 delete(){ 
   this.dataApiService.deleteAlbums(this.yeoman.preview.id).subscribe(response=>{
     this.dataApiService.getAllAlbums().subscribe(response=>{

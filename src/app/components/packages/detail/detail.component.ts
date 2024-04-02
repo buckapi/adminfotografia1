@@ -19,6 +19,9 @@ export class DetailComponent implements OnInit {
       
       
       }
+editPaquete(){
+  this.router.navigate(['pacEdit']);
+}
 delete(){ 
   this.dataApiService.deletePackages(this.yeoman.preview.id).subscribe(response=>{
     this.dataApiService.getAllPackages().subscribe(response=>{

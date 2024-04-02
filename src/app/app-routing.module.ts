@@ -21,31 +21,26 @@ const routes: Routes = [
 
   { path: 'proDetail', loadChildren: () => import('./components/products/detailcliente/detailcliente.module').then(m => m.DetailclienteModule) },
 
+  { path: 'proEdit', loadChildren: () => import('./components/products/editcliente/editcliente.module').then(m => m.EditclienteModule) },
+
   { path: 'albAdd', loadChildren: () => import('./components/albums/addtest/addtest.module').then(m => m.AddtestModule) },
 
   { path: 'albAll', loadChildren: () => import('./components/albums/alltest/alltest.module').then(m => m.AlltestModule) },
 
   { path: 'albDetail', loadChildren: () => import('./components/albums/detailtest/detailtest.module').then(m => m.DetailtestModule) },
 
+  { path: 'albEdit', loadChildren: () => import('./components/albums/edittest/edittest.module').then(m => m.EdittestModule) },
+
   { path: 'pacAll', loadChildren: () => import('./components/packages/all/all.module').then(m => m.AllModule) },
   
   { path: 'pacAdd', loadChildren: () => import('./components/packages/add/add.module').then(m => m.AddModule) },
 
   { path: 'pacDetail', loadChildren: () => import('./components/packages/detail/detail.module').then(m => m.DetailModule) },
-  
-  { path: 'requestAll', loadChildren: () => import('./components/request/all/all.module').then(m => m.AllModule) },
-  
-  
+ 
+  { path: 'pacEdit', loadChildren: () => import('./components/packages/edit/edit.module').then(m => m.EditModule) },
 
-  /*   
-  { path: 'solutionDetail', loadChildren: () => import('./components/click2order/detail/detail.module').then(m => m.DetailModule) },
-  { path: 'solutionAll', loadChildren: () => import('./components/click2order/all/all.module').then(m => m.AllModule) },
-  { path: 'solutionAdd', loadChildren: () => import('./components/click2order/add/add.module').then(m => m.AddModule) },
-  { path: 'modulesAdd', loadChildren: () => import('./components/modules/add/add.module').then(m => m.AddModule) },
-  { path: 'modulesDetail', loadChildren: () => import('./components/modules/detail/detail.module').then(m => m.DetailModule) },
-  */
-  
-  
+  { path: 'requestAll', loadChildren: () => import('./components/request/all/all.module').then(m => m.AllModule) },
+    
 ];
 
 @NgModule({

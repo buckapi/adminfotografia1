@@ -1,46 +1,44 @@
-.btedit {
-    color: #00838f;
-    
+.card {
+    margin-bottom: 1.875rem;
+    background-color: #fff;
+    transition: all .5s ease-in-out;
+    position: relative;
+    border: 1px solid #156ee1;
+    border-radius: 1.25rem;
+    box-shadow: 2px 2px 2px 0px #156ee1;
+    height: calc(100% - 30px);
 }
 
- .btn-danger1 {
-    color: #fff;
-    background-color: #00838f;
-    border-color: #00838f;
-}
-/*
-.light.btn-danger {
-    background-color: #fff3f7;
-    border-color: #fff3f7;
-    color: #00838f;
-} */
-
-.testimonial {
-    background-color: #f7f7f7;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    text-align: center;
+.module-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
-.testimonial h4 {
-    font-size: 24px;
-    color: #333;
+.text-content {
+    font-weight: bold;
+    margin: 5px 0;
 }
 
-.testimonial-title {
-    font-size: 18px;
-    color: #777;
-    margin-top: 10px;
+.item {
+    color: #007bff; /* Cambia el color de texto a azul */
+    font-weight: normal; /* Restaura el peso de la fuente a normal */
 }
 
-.testimonial-detail {
-    font-size: 16px;
-    color: #555;
-    margin-top: 10px;
-}
-.fixed-size-image {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-}
+/* Puedes agregar más estilos según tus necesidades */
+
+  
+  .btn-primary1{
+    color: #0a6ed5;
+    border-color: #1367c8;
+    margin-right: 5px;
+    padding: 0.438rem 1rem;
+    font-weight: 600;
+    border-radius: 1.25rem;
+    font-size: small;
+  }
+
+
+

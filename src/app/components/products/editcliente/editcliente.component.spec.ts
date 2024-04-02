@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ExternalDataComponent } from './external-data.component';
+import { EditclienteComponent } from './editcliente.component';
 
-describe('ExternalDataComponent', () => {
-  let component: ExternalDataComponent;
-  let fixture: ComponentFixture<ExternalDataComponent>;
+describe('EditclienteComponent', () => {
+  let component: EditclienteComponent;
+  let fixture: ComponentFixture<EditclienteComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ExternalDataComponent ]
+      declarations: [ EditclienteComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ExternalDataComponent);
+    fixture = TestBed.createComponent(EditclienteComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

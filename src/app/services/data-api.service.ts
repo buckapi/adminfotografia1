@@ -190,49 +190,13 @@ export class DataApiService {
 
 	
 
-
-	carUpdate(car :CarInterface, id: string){
-		// let token = this.authService.getToken();
-		const url_api=	this.yeoman.origin.restUrl+`/api/cars/${id}`;
-		return this.http
-		.put<CarInterface>(url_api, car)
-		.pipe(map(data => data));
-	}
-	partUpdate(part :PartInterface, id: string){
-		// let token = this.authService.getToken();
-		const url_api=	this.yeoman.origin.restUrl+`/api/products/${id}`;
-		return this.http
-		.put<PartInterface>(url_api, part)
-		.pipe(map(data => data));
-	}
 	clientUpdate(part :ClientInterface, id: string){
 		// let token = this.authService.getToken();
 		const url_api=	this.yeoman.origin.restUrl+`/api/clients/${id}`;
 		return this.http
 		.put<ClientInterface>(url_api, part)
 		.pipe(map(data => data));
-	}
-	testimonyUpdate(part :ClientInterface, id: string){
-		// let token = this.authService.getToken();
-		const url_api=	this.yeoman.origin.restUrl+`/api/testimonials/${id}`;
-		return this.http
-		.put<ClientInterface>(url_api, part)
-		.pipe(map(data => data));
-	}
-	integrationUpdate(part :ClientInterface, id: string){
-		// let token = this.authService.getToken();
-		const url_api=	this.yeoman.origin.restUrl+`/api/integrations/${id}`;
-		return this.http
-		.put<ClientInterface>(url_api, part)
-		.pipe(map(data => data));
-	}
-	rubroUpdate(part :ClientInterface, id: string){
-		// let token = this.authService.getToken();
-		const url_api=	this.yeoman.origin.restUrl+`/api/rubros/${id}`;
-		return this.http
-		.put<ClientInterface>(url_api, part)
-		.pipe(map(data => data));
-	}
+	}	
 	modulesUpdate(part :ClientInterface, id: string){
 		// let token = this.authService.getToken();
 		const url_api=	this.yeoman.origin.restUrl+`/api/modules/${id}`;
@@ -291,30 +255,7 @@ export class DataApiService {
 		.post<ClientInterface>(url_api, client)
 		.pipe(map(data => data));
 	}
-	saveTestimony(client :ClientInterface){
-		const url_api=	this.yeoman.origin.restUrl+'/api/testimonials';
-		return this.http
-		.post<ClientInterface>(url_api, client)
-		.pipe(map(data => data));
-	}
-	saveRubro(client :ClientInterface){
-		const url_api=	this.yeoman.origin.restUrl+'/api/rubros';
-		return this.http
-		.post<ClientInterface>(url_api, client)
-		.pipe(map(data => data));
-	}
-	saveIntegration(client :ClientInterface){
-		const url_api=	this.yeoman.origin.restUrl+'/api/integrations';
-		return this.http
-		.post<ClientInterface>(url_api, client)
-		.pipe(map(data => data));
-	}
-	saveModules(client :ClientInterface){
-		const url_api=	this.yeoman.origin.restUrl+'/api/modules';
-		return this.http
-		.post<ClientInterface>(url_api, client)
-		.pipe(map(data => data));
-	}
+	
 	saveServices(client :ProductInterface){
 		const url_api=	this.yeoman.origin.restUrl+'/api/services';
 		return this.http

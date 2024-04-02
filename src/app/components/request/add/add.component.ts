@@ -77,7 +77,7 @@ export class AddComponent implements AfterViewInit {
     console.log(category);
     this.data.categories=category.value;
   }
-  onSubmit() {
+  /* onSubmit() {
     this.data.ref = (Math.floor(Math.random() * 10000000000000)).toString();
     this.data.images = this._butler.uploaderImages;
     this.dataApiService.saveModules(this.data).subscribe(response => {
@@ -93,7 +93,7 @@ export class AddComponent implements AfterViewInit {
       })
     });
     console.log(this.data);
-  }
+  } */
   getAllCategories() {
     this.dataApiService.getAllCategory().subscribe(response => {
       this.yeoman.categories = response;

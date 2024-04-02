@@ -13,6 +13,8 @@ const routes: Routes = [
 
   { path: 'servDetail', loadChildren: () => import('./components/services/detailcategory/detailcategory.module').then(m => m.DetailcategoryModule) },
 
+  { path: 'servEdit', loadChildren: () => import('./components/services/editcategory/editcategory.module').then(m => m.EditcategoryModule) },
+
   { path: 'proAdd', loadChildren: () => import('./components/products/addcliente/addcliente.module').then(m => m.AddclienteModule) },
 
   { path: 'proAll', loadChildren: () => import('./components/products/allcliente/allcliente.module').then(m => m.AllclienteModule) },
@@ -32,6 +34,8 @@ const routes: Routes = [
   { path: 'pacDetail', loadChildren: () => import('./components/packages/detail/detail.module').then(m => m.DetailModule) },
   
   { path: 'requestAll', loadChildren: () => import('./components/request/all/all.module').then(m => m.AllModule) },
+  
+  
 
   /*   
   { path: 'solutionDetail', loadChildren: () => import('./components/click2order/detail/detail.module').then(m => m.DetailModule) },

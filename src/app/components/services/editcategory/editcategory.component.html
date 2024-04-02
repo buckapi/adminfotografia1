@@ -1,0 +1,71 @@
+<div class="content-body">
+    <div class="container-fluid">
+        <div class="page-titles">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a routerLink="../servAll">Servicios</a></li>
+                <li class="breadcrumb-item active"><a href="javascript:void(0)">Agregar servicio</a></li>
+            </ol>
+        </div>
+        <!-- row -->
+        <div class="row">
+            <div class="col-xl-12 col-xxl-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title"></h4>
+                    </div>
+                    <div class="card-body">
+
+                        <form>
+                            <div class="row">
+                                 <div class="col-md-4">
+                                <div class="">
+                                    <div class="">
+                                        <ngx-awesome-uploader [adapter]="adapter" [captions]="captions">
+                                        </ngx-awesome-uploader>
+                                    </div>
+                                </div>
+                                </div> 
+                                <div class="col-md-8">
+                                <div class="">
+                                    <div class="">
+                                    <div class="form-group">
+                                        <label for="event-name">Nombre del servicio</label>
+                                        <input  class="form-control" placeholder="nombre"type="text" [(ngModel)]="data.name" name="name" required  [ngModelOptions]="{standalone: true}">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="event-name">Sub titulo</label>
+                                        <input  class="form-control" placeholder="sub titulo"type="text" [(ngModel)]="data.subname" name="subname" required  [ngModelOptions]="{standalone: true}">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="event-name">Parrafo 1</label>
+                                        <input  class="form-control" placeholder="Descripción"type="text" [(ngModel)]="data.description1" name="description" required  [ngModelOptions]="{standalone: true}">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="event-name">Parrafo 2</label>
+                                        <input  class="form-control" placeholder="Descripción"type="text" [(ngModel)]="data.description2" name="description" required  [ngModelOptions]="{standalone: true}">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="event-name">Parrafo 3</label>
+                                        <input  class="form-control" placeholder="Descripción"type="text" [(ngModel)]="data.description3" name="description" required  [ngModelOptions]="{standalone: true}">
+                                    </div>
+                                    </div>
+                                    <div *ngFor="let itemService of data.itemServices; let i = index" class="form-group">
+                                        <label for="event-name">Item (servicios): {{i + 1}}</label>
+                                        <input class="form-control" placeholder="Item" type="text" [(ngModel)]="itemService.item" [name]="'itemService' + i" required>
+                                    </div> 
+<!--                                     <button class="btn btn-primary" (click)="addItemService()" style=" margin: 10px;"><i class="fa fa-plus"></i> Agregar item </button>
+ -->                                    </div>
+                                </div>
+                            </div>
+                            <div class="popup-box-actions medium void" style="text-align: end;">
+                                <button class="btn btn-primary" id="closeButton"  (click)="onSubmit()" style="background-color: #558b2f;
+                                border-color: #558b2f; margin-right: 10px;">Guardar!</button>
+                                <button class="btn btn-primary" id="closeButton"  (click)="cancelarUpdate()">Cancelar!</button>
+                            </div>
+                          </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

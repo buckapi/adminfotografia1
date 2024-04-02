@@ -240,11 +240,11 @@ export class DataApiService {
 		.put<ClientInterface>(url_api, part)
 		.pipe(map(data => data));
 	}
-	servicesUpdate(part :ProductInterface, id: string){
+	categoryUpdate(car :CategoryInterface, id: string){
 		// let token = this.authService.getToken();
-		const url_api=	this.yeoman.origin.restUrl+`/api/services/${id}`;
+		const url_api=	this.yeoman.origin.restUrl+`/api/categories/${id}`;
 		return this.http
-		.put<ProductInterface>(url_api, part)
+		.put<CategoryInterface>(url_api, car)
 		.pipe(map(data => data));
 	}
 	albumsUpdate(part :ProductInterface, id: string){

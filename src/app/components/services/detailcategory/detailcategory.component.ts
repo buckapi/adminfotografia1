@@ -17,17 +17,21 @@ export class DetailcategoryComponent implements OnInit {
     ) 
     { 
       //  if(this.yeoman.preview.images[0]===undefined){this.router.navigate([''])}
+      
     }
-delete(){ 
-  this.dataApiService.deleteCategory(this.yeoman.preview.id).subscribe(response=>{
-    this.dataApiService.getAllCategory().subscribe(response=>{
-      this.yeoman.allcategory=response;
-    });
-  });
-  this.router.navigate(['/servAll']);
-}
-cancelDelete(){}
-  ngOnInit(): void {
+  editCategory(){
+    this.router.navigate(['servEdit']);
   }
+  delete(){ 
+    this.dataApiService.deleteCategory(this.yeoman.preview.id).subscribe(response=>{
+      this.dataApiService.getAllCategory().subscribe(response=>{
+        this.yeoman.allcategory=response;
+      });
+    });
+    this.router.navigate(['/servAll']);
+  }
+  cancelDelete(){}
+    ngOnInit(): void {
+    }
 
 }

@@ -59,25 +59,33 @@ export class EditcategoryComponent implements OnInit {
       this.router.navigate(['/servAll']);
     }
       onSubmit() {
-        /* this.data.ref = (Math.floor(Math.random() * 10000000000000)).toString();
-        this.data.images=this._butler.uploaderImages; */
-        this.dataApiService.categoryUpdate (this.data,this.yeoman.preview.id).subscribe(response=>{
-          console.log(response);
-          this._butler.uploaderImages=[];
-          this.router.navigate(['servAll']);
-          Swal.fire({
-            position: 'center',
-            icon: 'success',
-            title: 'Servicio Actualizado',
-            showConfirmButton: false,
-            timer: 1500
-          })
-         
-          //  this.getProducts();
-        });
-        // Aquí puedes enviar los datos al servidor o realizar las acciones necesarias
-        console.log(this.data);
-        
+        if (this._butler.uploaderImages.length > 0) {
+          this.data.images = this._butler.uploaderImages;
+           }
+           this.dataApiService.categoryUpdate(this.data, this.yeoman.preview.id).subscribe(response => {
+               console.log(response);
+               this.router.navigate(['servAll']);
+               this.data = {
+                images: [] as string[], // o cualquier otro tipo de dato adecuado, como any[]
+                name: '',
+                subname: '',
+                description1: '',
+                description2: '',
+                description3: '',
+                ref: '',
+                itemServices: [{item:'' }]
+               };
+               this._butler.uploaderImages = [];
+               Swal.fire({
+                   position: 'center',
+                   icon: 'success',
+                   title: 'Servicio Actualizado',
+                   showConfirmButton: false,
+                   timer: 1500
+               });
+           });
+         // Aquí puedes enviar los datos al servidor o realizar las acciones necesarias
+         console.log(this.data);       
         }
   ngOnInit(): void {
   }

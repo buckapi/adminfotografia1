@@ -188,11 +188,11 @@ export class DataApiService {
 		return this.http.get(url_api);
 	}
 
-	clientUpdate(part :ClientInterface, id: string){
+	productUpdate(product :ProductInterface, id: string){
 		// let token = this.authService.getToken();
-		const url_api=	this.yeoman.origin.restUrl+`/api/clients/${id}`;
+		const url_api=	this.yeoman.origin.restUrl+`/api/products/${id}`;
 		return this.http
-		.put<ClientInterface>(url_api, part)
+		.put<ProductInterface>(url_api, product)
 		.pipe(map(data => data));
 	}	
 	

@@ -71,25 +71,43 @@ export class EditComponent implements AfterViewInit {
       this.router.navigate(['/pacAll']);
     }
       onSubmit() {
-        /* this.data.ref = (Math.floor(Math.random() * 10000000000000)).toString();
-        this.data.images=this._butler.uploaderImages; */
-        this.dataApiService.packagesUpdate (this.data,this.yeoman.preview.id).subscribe(response=>{
-          console.log(response);
-          this._butler.uploaderImages=[];
-          this.router.navigate(['pacAll']);
-          Swal.fire({
-            position: 'center',
-            icon: 'success',
-            title: 'Paquete Actualizado',
-            showConfirmButton: false,
-            timer: 1500
-          })
-         
-          //  this.getProducts();
-        });
+        if (this._butler.uploaderImages.length > 0) {
+         this.data.images = this._butler.uploaderImages;
+          }
+          this.dataApiService.packagesUpdate(this.data, this.yeoman.preview.id).subscribe(response => {
+              console.log(response);
+              this.router.navigate(['pacAll']);
+              this.data = {
+                images: [] as string[],
+                ref: '',
+                name: '',
+                title: '',
+                description: '', 
+                placeSessions: [{place:'' }],
+                numberPeople: '',
+                clothings: [{cloth:'' }],
+                numberPhoto: '',
+                price:'',
+                numberSessions:[{sesion:''}],
+                duration:'',
+                not:'',
+                sesion:'',
+                notes:[{not:''}],
+                includes:[{inclu:''}],
+                idCategory:'',
+                faqs: [{ p: '', r: '' }]
+              };
+              this._butler.uploaderImages = [];
+              Swal.fire({
+                  position: 'center',
+                  icon: 'success',
+                  title: 'Paquete Actualizado',
+                  showConfirmButton: false,
+                  timer: 1500
+              });
+          });
         // Aquí puedes enviar los datos al servidor o realizar las acciones necesarias
         console.log(this.data);
-        
         }
      getAllCategories(){
       this.dataApiService.getAllCategory().subscribe(response=>{

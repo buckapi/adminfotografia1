@@ -36,7 +36,6 @@ export class EditclienteComponent implements AfterViewInit {
     name: '',
     size:'',
     description:'',
-   /*  price:'', */
     ref: '',
      idCategory: '',
   };
@@ -51,29 +50,38 @@ export class EditclienteComponent implements AfterViewInit {
       this.data=this.yeoman.preview;
     }
     cancelarUpdate(){
-      this.router.navigate(['/pacAll']);
+      this.router.navigate(['/proAll']);
     }
-      onSubmit() {
-        /* this.data.ref = (Math.floor(Math.random() * 10000000000000)).toString();
-        this.data.images=this._butler.uploaderImages; */
-        this.dataApiService.clientUpdate (this.data,this.yeoman.preview.id).subscribe(response=>{
+    onSubmit() {
+      // Verificar si hay una nueva imagen seleccionada
+      if (this._butler.uploaderImages.length > 0) {
+          // Si hay una nueva imagen seleccionada, actualizarla en this.data.images
+          this.data.images = this._butler.uploaderImages;
+      }
+  
+      // Realizar la actualización del producto
+      this.dataApiService.productUpdate(this.data, this.yeoman.preview.id).subscribe(response => {
           console.log(response);
-          this._butler.uploaderImages=[];
-          this.router.navigate(['pacAll']);
+          this.router.navigate(['proAll']);
+          this.data = {
+              images: [] as string[],
+              name: '',
+              size: '',
+              description: '',
+              ref: '',
+              idCategory: ''
+          };
+          this._butler.uploaderImages = [];
           Swal.fire({
-            position: 'center',
-            icon: 'success',
-            title: 'Producto Actualizado',
-            showConfirmButton: false,
-            timer: 1500
-          })
-         
-          //  this.getProducts();
-        });
-        // Aquí puedes enviar los datos al servidor o realizar las acciones necesarias
-        console.log(this.data);
-        
-        }
+              position: 'center',
+              icon: 'success',
+              title: 'Producto Actualizado',
+              showConfirmButton: false,
+              timer: 1500
+          });
+      });
+  }
+  
 
   ngAfterViewInit(): void {
   }

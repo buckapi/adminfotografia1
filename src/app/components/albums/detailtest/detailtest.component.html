@@ -6,12 +6,12 @@
                 <li class="breadcrumb-item active"><a href="javascript:void(0)">Detalle</a></li>
             </ol>
             <ol class="breadcrumb" style="justify-content: end;">
-                <li>
+               <!--  <li>
                     <button class="btn btn-primary1 ml-auto" (click)="editAlbum()" style="display: flex; flex-direction: column; align-items: center;">
                       <i class="feather icon-drawar" style="margin-bottom: 5px;"></i>
                       Editar
                     </button>
-                  </li>
+                  </li> -->
                   
                 <li>
                     <button [swal]="
@@ -39,22 +39,7 @@
             <div class="col-lg-12">
                 <div class="card">
                     <div class="card-body">
-                        <div class="row">
-                            <div class="col-xl-3 col-lg-6  col-md-6 col-xxl-5 ">
-                                <!-- Tab panes -->
-                                <div class="tab-content">
-                                    
-                                    <div role="tabpanel" class="tab-pane fade show " [class.active]="i == 0" id="{{i}}" *ngFor="let image of yeoman.preview.images;let i =index;">
-                                        <img class="img-fluid" src="assets/gymove/images/product/1.jpg" alt="" *ngIf="yeoman.preview.images[0]===undefined">
-                                        <img class="img-fluid" src="{{image}}" alt="" *ngIf="image!==undefined">
-                                    </div>
-                                    
-                                   
-                                </div>
-                               
-                            </div>
-                            <!--Tab slider End-->
-                            <div class="col-xl-9 col-lg-6 col-md-6 col-xxl-7 col-sm-12">
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-xxl-12 col-sm-12">
                                 <div class="product-detail-content">
                                     <!-- Product details -->
                                     <div class="new-arrival-content pr">
@@ -66,58 +51,19 @@
                                 </div>
                             </div>
                             
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- review -->
-            <div class="modal fade" id="reviewModal">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title">Review</h5>
-                            <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <form>
-                                <div class="text-center mb-4">
-                                    <img class="img-fluid rounded" width="78" src="assets/gymove/images/avatar/1.jpg" alt="DexignZone">
-                                </div>
-                                <div class="form-group">
-                                    <div class="rating-widget mb-4 text-center">
-                                        <!-- Rating Stars Box -->
-                                        <div class="rating-stars">
-                                            <ul id="stars">
-                                                <li class="star" title="Poor" data-value="1">
-                                                    <i class="fa fa-star fa-fw"></i>
-                                                </li>
-                                                <li class="star" title="Fair" data-value="2">
-                                                    <i class="fa fa-star fa-fw"></i>
-                                                </li>
-                                                <li class="star" title="Good" data-value="3">
-                                                    <i class="fa fa-star fa-fw"></i>
-                                                </li>
-                                                <li class="star" title="Excellent" data-value="4">
-                                                    <i class="fa fa-star fa-fw"></i>
-                                                </li>
-                                                <li class="star" title="WOW!!!" data-value="5">
-                                                    <i class="fa fa-star fa-fw"></i>
-                                                </li>
-                                            </ul>
-                                        </div>
+                            <div class="col-12">
+                                <div class="row">
+                                <!-- Tab panes -->
+                                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6" [class.active]="i == 0" id="{{i}}" *ngFor="let image of yeoman.preview.images;let i =index;">
+                                        <img class="img-fluid" src="assets/gymove/images/product/1.jpg" alt="" *ngIf="yeoman.preview.images[0]===undefined">
+                                        <img class="img-fluid" src="{{image}}" alt="" *ngIf="image!==undefined">
                                     </div>
                                 </div>
-                                <div class="form-group">
-                                    <textarea class="form-control" placeholder="Comment" rows="5"></textarea>
-                                </div>
-                                <button class="btn btn-success btn-block">RATE</button>
-                            </form>
-                        </div>
+                            </div>
                     </div>
                 </div>
             </div>
+            
         </div>
     </div>
 </div>

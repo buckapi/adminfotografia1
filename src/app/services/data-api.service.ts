@@ -188,8 +188,6 @@ export class DataApiService {
 		return this.http.get(url_api);
 	}
 
-	
-
 	clientUpdate(part :ClientInterface, id: string){
 		// let token = this.authService.getToken();
 		const url_api=	this.yeoman.origin.restUrl+`/api/clients/${id}`;
@@ -197,13 +195,7 @@ export class DataApiService {
 		.put<ClientInterface>(url_api, part)
 		.pipe(map(data => data));
 	}	
-	modulesUpdate(part :ClientInterface, id: string){
-		// let token = this.authService.getToken();
-		const url_api=	this.yeoman.origin.restUrl+`/api/modules/${id}`;
-		return this.http
-		.put<ClientInterface>(url_api, part)
-		.pipe(map(data => data));
-	}
+	
 	categoryUpdate(car :CategoryInterface, id: string){
 		// let token = this.authService.getToken();
 		const url_api=	this.yeoman.origin.restUrl+`/api/categories/${id}`;

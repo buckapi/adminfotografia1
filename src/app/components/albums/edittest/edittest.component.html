@@ -21,10 +21,11 @@
                             <div class="card">
                                 <div class="card-body">
                                     <div class="row">
-                                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6" *ngFor="let image of yeoman.preview.images; let i = index">
+                                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6" style="position: relative;" *ngFor="let image of yeoman.preview.images; let i = index">
                                             <img class="img-fluid" [src]="image" alt="">
-<!--                                             <input type="checkbox" [(ngModel)]="imagesToDelete[i]"> Eliminar
- -->                                        </div>
+                                            <button class="delete-button" (click)="delete(i)">Eliminar</button>
+                                            
+                                        </div>
                                     </div>
                                 </div>
                             </div>

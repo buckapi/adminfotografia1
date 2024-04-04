@@ -29,6 +29,10 @@ delete(){
   });
   this.router.navigate(['/albAll']);
 }
+
+deleteSelectedImages(){
+  
+}
 cancelDelete(){}
   ngOnInit(): void {
   }

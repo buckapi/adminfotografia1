@@ -52,12 +52,31 @@ export class EdittestComponent implements AfterViewInit {
      cancelarUpdate(){
       this.router.navigate(['/albAll']);
     }
+
+
+    
+delete(indice:any){
+this.yeoman.preview.images.splice(indice);
+Swal.fire({
+  position: 'center',
+  icon: 'success',
+  title: 'borrado',
+  showConfirmButton: false,
+  timer: 1500
+  
+});
+
+}
+
     onSubmit() {
       // Obtener las imágenes actuales del álbum
-      const currentImages = this.yeoman.preview.images;
+      let currentImages = this.yeoman.preview.images;
+  
+     
   
       // Actualizar this.data.images con las imágenes actuales
-      this.data.images = currentImages;
+      this.yeoman.preview.images = currentImages;
+  
   
       // Verificar si hay nuevas imágenes seleccionadas para cargar
       if (this._butler.uploaderImages.length > 0) {
@@ -81,14 +100,12 @@ export class EdittestComponent implements AfterViewInit {
           Swal.fire({
               position: 'center',
               icon: 'success',
-              title: 'Album Actualizado',
+              title: 'Álbum Actualizado',
               showConfirmButton: false,
               timer: 1500
           });
       });
   }
-  
-  
   
   
   ngAfterViewInit(): void {

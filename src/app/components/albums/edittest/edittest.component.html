@@ -21,15 +21,11 @@
                             <div class="card">
                                 <div class="card-body">
                                     <div class="row">
-                                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6" 
-     style="position: relative; margin-top: 5px; " 
-     *ngFor="let image of yeoman.preview.images; let i = index"
-     (mouseenter)="toggleDeleteButton(i, true)"
-     (mouseleave)="toggleDeleteButton(i, false)">
-    <img class="img-fluid" [src]="image" alt="" style="border-radius: 10px; margin: 5px;">
-    <button class="delete-button" (click)="delete(i)" *ngIf="showDeleteButton[i]">Eliminar</button>
-</div>
-
+                                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6" style="position: relative;" *ngFor="let image of yeoman.preview.images; let i = index">
+                                            <img class="img-fluid" [src]="image" alt="">
+                                            <button class="delete-button" (click)="delete(i)">Eliminar</button>
+                                            
+                                        </div>
                                     </div>
                                 </div>
                             </div>

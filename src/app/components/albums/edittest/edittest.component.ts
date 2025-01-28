@@ -16,8 +16,6 @@ import { Router } from '@angular/router';
 export class EdittestComponent implements AfterViewInit {
   @ViewChild('deleteSwal')
   category='Seleccione una';
-  showDeleteButton: boolean[] = [];
-
   categorySeted:boolean=false;
   imagesToDelete: boolean[] = [];
   public captions: UploaderCaptions = {
@@ -55,9 +53,7 @@ export class EdittestComponent implements AfterViewInit {
       this.router.navigate(['/albAll']);
     }
 
-    toggleDeleteButton(index: number, isVisible: boolean) {
-      this.showDeleteButton[index] = isVisible;
-  }
+
     
 delete(indice:any){
 this.yeoman.preview.images.splice(indice);
